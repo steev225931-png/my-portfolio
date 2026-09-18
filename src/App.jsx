@@ -12,7 +12,7 @@ import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Box
         sx={{
           minHeight: "100vh",
@@ -32,7 +32,9 @@ export default function App() {
             <Route path="/project/:id" element={<ProjectDetail />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
-        </Box>
+              </Box>
+
+        <Footer />
       </Box>
     </BrowserRouter>
   );
